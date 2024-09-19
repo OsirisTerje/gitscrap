@@ -1,0 +1,55 @@
+name: HelseID Registrering
+description: Registrer en applikasjon i HelseId for produksjon
+projects: ["Whatever""]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Endelig tid for å sette galskapen i produksjon!  Fyll ut dette, så blir dokumentasjonen din generert, og levert til HelseId.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: Hva slags type applikasjon skal du registrere?
+      options:
+        - WebKlient (Default)
+        - MaskinKlient
+        - Api
+      default: 0
+    validations:
+      required: true
+  - type: checkboxes
+    id: api
+    attributes:
+      label: Mitt Api kaller andre Api'er.
+      description: Dersom du valgte Api ovenfor, skal ditt Api kalle andre Api'er? 
+      options:
+        - label: Ja
+  - type: checkboxes
+    id: webklient
+    attributes:
+      label: Min WebKlient Backend kaller andre Api'er.
+      description: Dersom du valgte WebKlient ovenfor, skal din WebKlient kalle andre Api'er? 
+      options:
+        - label: Ja
+  - type: checkboxes
+    id: dpop
+    attributes:
+      label: Bruk av DPop
+      description: Krever Api'ene du skal kalle DPop?
+      options:
+        - label: Ja
+  - type: textarea
+    id: comments
+    attributes:
+      label: Comments
+      description: Any comments you may have
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+
+
+
