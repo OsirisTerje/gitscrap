@@ -1,6 +1,6 @@
 name: HelseID Registrering
 description: Registrer en applikasjon i HelseId for produksjon
-title: ""
+title: " "
 labels: ["Fullt navn på applikasjonen", "2"]
 projects: ["Whatever"]
 assignees:
