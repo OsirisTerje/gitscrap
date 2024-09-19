@@ -1,6 +1,8 @@
 name: HelseID Registrering
 description: Registrer en applikasjon i HelseId for produksjon
-projects: ["Whatever""]
+title: "[HelseId]: "
+labels: ["1", "2"]
+projects: ["Whatever"]
 assignees:
   - octocat
 body:
