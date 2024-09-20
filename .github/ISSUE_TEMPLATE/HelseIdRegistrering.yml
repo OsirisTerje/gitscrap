@@ -81,7 +81,7 @@ body:
     attributes:
       label: Link til source code 
       description: Oppgi repository eller folder dersom flere apper i samme repo. 
-      placeholder: https://dev.azure.com/fhi/Fhi.Felles/Whatever
+      placeholder: url
     validations:
       required: true
   - type: dropdown
@@ -98,7 +98,7 @@ body:
     attributes:
       label: Link til modell tegning 
       description: Eventuelt. Oppgi link til wiki eller bilde. Kan også legges inn i repo her. Om ikke skriv kommentar under.
-      placeholder: https://dev.azure.com/fhi/Fhi.Felles/_wiki/wikis/Fhi.Felles.wiki/4507/Neseblod
+      placeholder: url
     validations:
       required: false
   - type: textarea
