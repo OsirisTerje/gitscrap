@@ -49,11 +49,63 @@ body:
         - Ja
         - Nei
       default: 1
+  - type: dropdown
+    id: brukeritoken
+    attributes:
+      label: Accesstoken inneholder innlogget bruker
+      description: Krever API informasjon om innlogget bruker i token?
+      options:
+        - Ja
+        - Nei
+      default: 1
+  - type: dropdown
+    id: drift
+    attributes:
+      label: Driftsmiljo
+      description: Hvor skal applikasjonen driftes?
+      options:
+        - NDL
+        - NDL v2 (privat sky)
+        - Etatsplattformen yellow (Ordinær sone)
+        - Etatsplattformen dmz 
+        - Etatsplattformen purple 
+        - Etatsplattformen red (Sikker sone)
+        - TSD UiO
+        - EduCloud UiO
+        - Hunt NTNU
+        - Azure med Helsenett 
+        - Azure uten Helsenett
+      default: 0    
+  - type: input
+    id: sourcecode
+    attributes:
+      label: Link til source code 
+      description: Oppgi repository eller folder dersom flere apper i samme repo. 
+      placeholder: https://dev.azure.com/fhi/Fhi.Felles/Whatever
+    validations:
+      required: true
+  - type: dropdown
+    id: nda
+    attributes:
+      label: Krever FHI NDA
+      description: Om kildekode ligger hos Fhi og ikke er open source kreves NDA, som Nhn må levere inn av de som eventuelt skal granske koden
+      options:
+        - Ja
+        - Nei
+      default: 0
+  - type: input
+    id: modell
+    attributes:
+      label: Link til modell tegning 
+      description: Eventuelt. Oppgi link til wiki eller bilde. Kan også legges inn i repo her. Om ikke skriv kommentar under.
+      placeholder: https://dev.azure.com/fhi/Fhi.Felles/_wiki/wikis/Fhi.Felles.wiki/4507/Neseblod
+    validations:
+      required: false
   - type: textarea
     id: comments
     attributes:
-      label: Comments
-      description: Any comments you may have
+      label: Kommentarer
+      description: Er det noen ekstra informasjon som du vil ha med?
     validations:
       required: false
 
